@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap');
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --bg-glass: rgba(18, 18, 18, 0.75);
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  
+  --neon-accent: #00ffcc; /* Cyan neon */
+  --neon-secondary: #bc13fe; /* Purple neon */
+  
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-neon: rgba(0, 255, 204, 0.3);
+  
+  --font-family: 'Outfit', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography utilities */
+.text-neon {
+  color: var(--neon-accent);
+  text-shadow: 0 0 8px var(--border-neon);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--neon-accent), var(--neon-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.glass-nav {
+  background: rgba(10, 10, 10, 0.8) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Buttons */
+.btn-neon {
+  background: transparent;
+  color: var(--neon-accent) !important;
+  border: 1px solid var(--neon-accent);
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-neon:hover {
+  background: var(--neon-accent);
+  color: var(--bg-primary) !important;
+  box-shadow: 0 0 20px var(--neon-accent), 0 0 40px var(--neon-accent);
+}
+
+/* Micro-animations */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.glow-card {
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.glow-card:hover {
+  border-color: var(--neon-accent);
+  box-shadow: 0 0 15px var(--border-neon);
+  transform: translateY(-5px);
+}
+
+/* Reset Links */
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--neon-accent);
+}
+
+/* Category Glow Effect */
+.category-glow {
+  transition: all 0.4s ease;
+  border: 1px solid var(--border-neon) !important;
+}
+
+.category-glow:hover {
+  border-color: var(--neon-accent) !important;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.4);
+  transform: translateY(-8px);
+}
